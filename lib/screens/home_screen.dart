@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import '../services/supabase_service.dart';
 import '../models/video_model.dart';
+import 'admin_screen.dart';
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -346,6 +347,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => const AdminScreen()),
+          );
+        },
+        backgroundColor: const Color(0xFF6C63FF),
+        child: const Icon(Icons.add, size: 30),
+      ),
     );
   }
 }

@@ -7,6 +7,7 @@ import '../screens/detail_screen.dart';
 import '../screens/favorites_screen.dart';
 import '../screens/history_screen.dart';
 import '../screens/profile_screen.dart';
+import '../screens/admin_screen.dart';
 import '../services/supabase_service.dart';
 
 class AppRouter {
@@ -72,6 +73,11 @@ class AppRouter {
         path: '/profile',
         name: 'profile',
         builder: (context, state) => const ProfileScreen(),
+      ),
+      GoRoute(
+        path: '/admin',
+        name: 'admin',
+        builder: (context, state) => const AdminScreen(),
       ),
     ],
   );
